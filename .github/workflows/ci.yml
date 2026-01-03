@@ -17,5 +17,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Force failure
-        run: node --version
+      - name: Install depencencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
