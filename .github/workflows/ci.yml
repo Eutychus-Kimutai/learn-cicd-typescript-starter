@@ -20,5 +20,5 @@ jobs:
       - name: Install depencencies
         run: npm ci
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm test -- --coverage

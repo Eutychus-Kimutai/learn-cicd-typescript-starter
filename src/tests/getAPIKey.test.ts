@@ -21,7 +21,6 @@ describe("Retun authorization header API key when valid", () => {
   test("Should return API key", () => {
     const headers = { authorization: "ApiKey my-secret-api-key" };
     const result = getAPIKey(headers);
-    console.log("Result:", result);
     expect(result).toBe("my-secret-api-key");
   });
 });
