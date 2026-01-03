@@ -24,6 +24,7 @@ jobs:
         run: npm test -- --coverage
 
       - name: Style
-        run: |
-          npm run format:check
-          npm run lint
+        run: npm run format:check
+
+      - name: Check linting
+        run: npm run lint -- --max-warnings=0
