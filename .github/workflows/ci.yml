@@ -15,7 +15,10 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Force failure
-        run: (exit 1)
+      - name: Install depencencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test -- --coverage
